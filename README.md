@@ -32,8 +32,7 @@ A original theme inspired by autumn leaves and the good old beige computer in th
 
 This project requires Node 24.11.1 or later (Using Node's new TypeScript support `--experimental-transform-types` flag) and uses [pnpm](https://pnpm.io/installation) as its package manager.
 
-1. Install dependencies with `pnpm install`.
-2. Start watching the theme files for changes with `pnpm run watch`.
+Install dependencies with `pnpm install`.
 
 ## Commands
 
