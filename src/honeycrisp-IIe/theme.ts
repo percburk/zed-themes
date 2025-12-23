@@ -10,7 +10,7 @@ export const base = {
     backgroundElement: '#2a251b',
     backgroundHover: '#312e2a',
     backgroundSelected: '#28231f',
-    backgroundDraggingOver: '#e8834f66',
+    backgroundDraggingOver: '#cb561b66',
     backgroundActiveLine: '#2a251b',
     border: '#413b36',
     textExtraLight: '#fffaf0',
@@ -18,7 +18,7 @@ export const base = {
     textMedium: '#90867a',
     textDark: '#756c62',
     textExtraDark: '#534c45',
-    red: '#a35c5c',
+    red: '#ac6c6c',
     green: '#7dad7d',
     yellow: '#d9a962',
     blue: '#8db4d6',
@@ -90,8 +90,8 @@ export const tangNoitalics = {
   styles: { ...base.styles, fontStyle: 'normal' },
 }
 
-export function createSvg({ colors }: Theme) {
-  const circle = (color: string, i: number) => `
+function createCircle(color: string, i: number) {
+  return `
     <circle
       r="4"
       cy="${Math.ceil((i + 1) / 4) * 10}"
@@ -99,9 +99,23 @@ export function createSvg({ colors }: Theme) {
       fill="${color}"
     />
   `
-  
-  
+}
 
+export function createSvg({ colors }: Theme) {
+  const filteredColors = Object.entries(colors).reduce(
+    (acc: string[], [key, color]) => {
+      const isPreviewColor = ['black', 'transparent', 'terminal'].every(
+        (keyTerm) => !key.includes(keyTerm)
+      )
+
+      if (isPreviewColor) {
+        acc.push(color)
+      }
+
+      return acc
+    },
+    []
+  )
   return `
     <svg
       width="200"
@@ -109,7 +123,7 @@ export function createSvg({ colors }: Theme) {
       viewBox="0 0 50 ${Math.ceil(Object.keys(colors).length / 4) * 12}"
       xmlns="http://www.w3.org/2000/svg"
     >
-      ${[...new Set(Object.values(colors))].map(circle).join('')}
+    ${[...new Set(filteredColors)].map(createCircle).join('')}
     </svg>
   `
 }
@@ -248,7 +262,13 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
       warning: colors.yellow,
       'warning.background': colors.background,
       'warning.border': colors.yellow,
-      players: [],
+      players: [
+        {
+          cursor: colors.syntaxKeyword,
+          selection: colors.backgroundDraggingOver,
+          background: colors.backgroundActiveLine,
+        },
+      ],
       syntax: {
         attribute: {
           color: colors.syntaxAttribute,
@@ -472,6 +492,15 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
         },
       },
       'background.appearance': 'opaque',
+      'vim.mode.text': colors.background,
+      'vim.normal.background': colors.blue,
+      'vim.helix_normal.background': colors.blue,
+      'vim.visual.background': colors.syntaxBoolean,
+      'vim.helix_select.background': colors.syntaxBoolean,
+      'vim.insert.background': colors.green,
+      'vim.visual_line.background': colors.syntaxBoolean,
+      'vim.visual_block.background': colors.syntaxBoolean,
+      'vim.replace.background': colors.red,
     },
   }
 }

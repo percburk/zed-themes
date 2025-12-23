@@ -21,7 +21,7 @@
         "element.active": "#28231f",
         "element.selected": "#28231f",
         "element.disabled": "#534c45",
-        "drop_target.background": "#e8834f66",
+        "drop_target.background": "#cb561b66",
         "ghost_element.background": "#1b1816",
         "ghost_element.hover": "#312e2a",
         "ghost_element.active": "#28231f",
@@ -43,7 +43,7 @@
         "tab_bar.background": "#1b1816",
         "tab.inactive_background": "#1b1816",
         "tab.active_background": "#28231f",
-        "search.match_background": "#e8834f66",
+        "search.match_background": "#cb561b66",
         "panel.background": "#1b1816",
         "panel.focused_border": "#413b36",
         "pane.focused_border": "#413b36",
@@ -94,18 +94,18 @@
         "terminal.ansi.bright_white": "#ffffff",
         "terminal.ansi.dim_white": "#90867a",
         "link_text.hover": "#fffaf0",
-        "conflict": "#a35c5c",
+        "conflict": "#ac6c6c",
         "conflict.background": "#1b1816",
-        "conflict.border": "#a35c5c",
+        "conflict.border": "#ac6c6c",
         "created": "#7dad7d",
         "created.background": "#1b1816",
         "created.border": "#7dad7d",
-        "deleted": "#a35c5c",
+        "deleted": "#ac6c6c",
         "deleted.background": "#1b1816",
-        "deleted.border": "#a35c5c",
-        "error": "#a35c5c",
+        "deleted.border": "#ac6c6c",
+        "error": "#ac6c6c",
         "error.background": "#1b1816",
-        "error.border": "#a35c5c",
+        "error.border": "#ac6c6c",
         "hidden": "#756c62",
         "hidden.background": "#1b1816",
         "hidden.border": "#413b36",
@@ -136,7 +136,13 @@
         "warning": "#d9a962",
         "warning.background": "#1b1816",
         "warning.border": "#d9a962",
-        "players": [],
+        "players": [
+          {
+            "cursor": "#e8834f",
+            "selection": "#cb561b66",
+            "background": "#2a251b"
+          }
+        ],
         "syntax": {
           "attribute": {
             "color": "#b6a491",
@@ -359,7 +365,16 @@
             "font_weight": null
           }
         },
-        "background.appearance": "opaque"
+        "background.appearance": "opaque",
+        "vim.mode.text": "#1b1816",
+        "vim.normal.background": "#8db4d6",
+        "vim.helix_normal.background": "#8db4d6",
+        "vim.visual.background": "#d68fd6",
+        "vim.helix_select.background": "#d68fd6",
+        "vim.insert.background": "#7dad7d",
+        "vim.visual_line.background": "#d68fd6",
+        "vim.visual_block.background": "#d68fd6",
+        "vim.replace.background": "#ac6c6c"
       }
     },
     {
@@ -380,7 +395,7 @@
         "element.active": "#28231f",
         "element.selected": "#28231f",
         "element.disabled": "#534c45",
-        "drop_target.background": "#e8834f66",
+        "drop_target.background": "#cb561b66",
         "ghost_element.background": "#1b1816",
         "ghost_element.hover": "#312e2a",
         "ghost_element.active": "#28231f",
@@ -402,7 +417,7 @@
         "tab_bar.background": "#1b1816",
         "tab.inactive_background": "#1b1816",
         "tab.active_background": "#28231f",
-        "search.match_background": "#e8834f66",
+        "search.match_background": "#cb561b66",
         "panel.background": "#1b1816",
         "panel.focused_border": "#413b36",
         "pane.focused_border": "#413b36",
@@ -453,18 +468,18 @@
         "terminal.ansi.bright_white": "#ffffff",
         "terminal.ansi.dim_white": "#90867a",
         "link_text.hover": "#fffaf0",
-        "conflict": "#a35c5c",
+        "conflict": "#ac6c6c",
         "conflict.background": "#1b1816",
-        "conflict.border": "#a35c5c",
+        "conflict.border": "#ac6c6c",
         "created": "#7dad7d",
         "created.background": "#1b1816",
         "created.border": "#7dad7d",
-        "deleted": "#a35c5c",
+        "deleted": "#ac6c6c",
         "deleted.background": "#1b1816",
-        "deleted.border": "#a35c5c",
-        "error": "#a35c5c",
+        "deleted.border": "#ac6c6c",
+        "error": "#ac6c6c",
         "error.background": "#1b1816",
-        "error.border": "#a35c5c",
+        "error.border": "#ac6c6c",
         "hidden": "#756c62",
         "hidden.background": "#1b1816",
         "hidden.border": "#413b36",
@@ -495,7 +510,13 @@
         "warning": "#d9a962",
         "warning.background": "#1b1816",
         "warning.border": "#d9a962",
-        "players": [],
+        "players": [
+          {
+            "cursor": "#e8834f",
+            "selection": "#cb561b66",
+            "background": "#2a251b"
+          }
+        ],
         "syntax": {
           "attribute": {
             "color": "#b6a491",
@@ -718,7 +739,16 @@
             "font_weight": null
           }
         },
-        "background.appearance": "opaque"
+        "background.appearance": "opaque",
+        "vim.mode.text": "#1b1816",
+        "vim.normal.background": "#8db4d6",
+        "vim.helix_normal.background": "#8db4d6",
+        "vim.visual.background": "#d68fd6",
+        "vim.helix_select.background": "#d68fd6",
+        "vim.insert.background": "#7dad7d",
+        "vim.visual_line.background": "#d68fd6",
+        "vim.visual_block.background": "#d68fd6",
+        "vim.replace.background": "#ac6c6c"
       }
     },
     {
@@ -739,7 +769,7 @@
         "element.active": "#28231f",
         "element.selected": "#28231f",
         "element.disabled": "#534c45",
-        "drop_target.background": "#e8834f66",
+        "drop_target.background": "#cb561b66",
         "ghost_element.background": "#1b1816",
         "ghost_element.hover": "#312e2a",
         "ghost_element.active": "#28231f",
@@ -761,7 +791,7 @@
         "tab_bar.background": "#1b1816",
         "tab.inactive_background": "#1b1816",
         "tab.active_background": "#28231f",
-        "search.match_background": "#e8834f66",
+        "search.match_background": "#cb561b66",
         "panel.background": "#1b1816",
         "panel.focused_border": "#413b36",
         "pane.focused_border": "#413b36",
@@ -812,18 +842,18 @@
         "terminal.ansi.bright_white": "#ffffff",
         "terminal.ansi.dim_white": "#90867a",
         "link_text.hover": "#fffaf0",
-        "conflict": "#a35c5c",
+        "conflict": "#ac6c6c",
         "conflict.background": "#1b1816",
-        "conflict.border": "#a35c5c",
+        "conflict.border": "#ac6c6c",
         "created": "#7dad7d",
         "created.background": "#1b1816",
         "created.border": "#7dad7d",
-        "deleted": "#a35c5c",
+        "deleted": "#ac6c6c",
         "deleted.background": "#1b1816",
-        "deleted.border": "#a35c5c",
-        "error": "#a35c5c",
+        "deleted.border": "#ac6c6c",
+        "error": "#ac6c6c",
         "error.background": "#1b1816",
-        "error.border": "#a35c5c",
+        "error.border": "#ac6c6c",
         "hidden": "#756c62",
         "hidden.background": "#1b1816",
         "hidden.border": "#413b36",
@@ -854,7 +884,13 @@
         "warning": "#d9a962",
         "warning.background": "#1b1816",
         "warning.border": "#d9a962",
-        "players": [],
+        "players": [
+          {
+            "cursor": "#ff9547",
+            "selection": "#cb561b66",
+            "background": "#2a251b"
+          }
+        ],
         "syntax": {
           "attribute": {
             "color": "#b6a491",
@@ -1077,7 +1113,16 @@
             "font_weight": null
           }
         },
-        "background.appearance": "opaque"
+        "background.appearance": "opaque",
+        "vim.mode.text": "#1b1816",
+        "vim.normal.background": "#8db4d6",
+        "vim.helix_normal.background": "#8db4d6",
+        "vim.visual.background": "#f070f0",
+        "vim.helix_select.background": "#f070f0",
+        "vim.insert.background": "#7dad7d",
+        "vim.visual_line.background": "#f070f0",
+        "vim.visual_block.background": "#f070f0",
+        "vim.replace.background": "#ac6c6c"
       }
     },
     {
@@ -1098,7 +1143,7 @@
         "element.active": "#28231f",
         "element.selected": "#28231f",
         "element.disabled": "#534c45",
-        "drop_target.background": "#e8834f66",
+        "drop_target.background": "#cb561b66",
         "ghost_element.background": "#1b1816",
         "ghost_element.hover": "#312e2a",
         "ghost_element.active": "#28231f",
@@ -1120,7 +1165,7 @@
         "tab_bar.background": "#1b1816",
         "tab.inactive_background": "#1b1816",
         "tab.active_background": "#28231f",
-        "search.match_background": "#e8834f66",
+        "search.match_background": "#cb561b66",
         "panel.background": "#1b1816",
         "panel.focused_border": "#413b36",
         "pane.focused_border": "#413b36",
@@ -1171,18 +1216,18 @@
         "terminal.ansi.bright_white": "#ffffff",
         "terminal.ansi.dim_white": "#90867a",
         "link_text.hover": "#fffaf0",
-        "conflict": "#a35c5c",
+        "conflict": "#ac6c6c",
         "conflict.background": "#1b1816",
-        "conflict.border": "#a35c5c",
+        "conflict.border": "#ac6c6c",
         "created": "#7dad7d",
         "created.background": "#1b1816",
         "created.border": "#7dad7d",
-        "deleted": "#a35c5c",
+        "deleted": "#ac6c6c",
         "deleted.background": "#1b1816",
-        "deleted.border": "#a35c5c",
-        "error": "#a35c5c",
+        "deleted.border": "#ac6c6c",
+        "error": "#ac6c6c",
         "error.background": "#1b1816",
-        "error.border": "#a35c5c",
+        "error.border": "#ac6c6c",
         "hidden": "#756c62",
         "hidden.background": "#1b1816",
         "hidden.border": "#413b36",
@@ -1213,7 +1258,13 @@
         "warning": "#d9a962",
         "warning.background": "#1b1816",
         "warning.border": "#d9a962",
-        "players": [],
+        "players": [
+          {
+            "cursor": "#ff9547",
+            "selection": "#cb561b66",
+            "background": "#2a251b"
+          }
+        ],
         "syntax": {
           "attribute": {
             "color": "#b6a491",
@@ -1436,7 +1487,16 @@
             "font_weight": null
           }
         },
-        "background.appearance": "opaque"
+        "background.appearance": "opaque",
+        "vim.mode.text": "#1b1816",
+        "vim.normal.background": "#8db4d6",
+        "vim.helix_normal.background": "#8db4d6",
+        "vim.visual.background": "#f070f0",
+        "vim.helix_select.background": "#f070f0",
+        "vim.insert.background": "#7dad7d",
+        "vim.visual_line.background": "#f070f0",
+        "vim.visual_block.background": "#f070f0",
+        "vim.replace.background": "#ac6c6c"
       }
     }
   ]
