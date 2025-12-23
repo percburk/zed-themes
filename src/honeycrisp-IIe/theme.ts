@@ -10,7 +10,7 @@ export const base = {
     backgroundElement: '#2a251b',
     backgroundHover: '#312e2a',
     backgroundSelected: '#28231f',
-    backgroundDraggingOver: '#e8834f66',
+    backgroundDraggingOver: '#cb561b66',
     backgroundActiveLine: '#2a251b',
     border: '#413b36',
     textExtraLight: '#fffaf0',
@@ -18,15 +18,37 @@ export const base = {
     textMedium: '#90867a',
     textDark: '#756c62',
     textExtraDark: '#534c45',
-    red: '#a35c5c',
+    red: '#ac6c6c',
     green: '#7dad7d',
     yellow: '#d9a962',
     blue: '#8db4d6',
-    cyan: '#8db4d6',
-    magenta: '#d68fd6',
     white: '#f0e6d8',
     black: '#0d0b09',
     transparent: '#00000000',
+    terminalBlack: '#1c1917',
+    terminalBlackBright: '#272320',
+    terminalBlackDim: '#060505',
+    terminalBlue: '#81bbe4',
+    terminalBlueBright: '#91c4e8',
+    terminalBlueDim: '#5fa9dd',
+    terminalCyan: '#4bd8dd',
+    terminalCyanBright: '#7ee3e7',
+    terminalCyanDim: '#29d1d6',
+    terminalGreen: '#aaddaa',
+    terminalGreenBright: '#b5eeb5',
+    terminalGreenDim: '#6b9b6b',
+    terminalMagenta: '#d68fd6',
+    terminalMagentaBright: '#ffb3ff',
+    terminalMagentaDim: '#c053c0',
+    terminalRed: '#e96868',
+    terminalRedBright: '#ee8c8c',
+    terminalRedDim: '#e13333',
+    terminalWhite: '#fffaf0',
+    terminalWhiteBright: '#ffffff',
+    terminalWhiteDim: '#90867a',
+    terminalYellow: '#ffe900',
+    terminalYellowBright: '#ffed29',
+    terminalYellowDim: '#d6c400',
     syntaxString: '#fffaf0',
     syntaxNumber: '#d68fd6',
     syntaxBoolean: '#d68fd6',
@@ -68,8 +90,8 @@ export const tangNoitalics = {
   styles: { ...base.styles, fontStyle: 'normal' },
 }
 
-export function createSvg({ colors }: Theme) {
-  const circle = (color: string, i: number) => `
+function createCircle(color: string, i: number) {
+  return `
     <circle
       r="4"
       cy="${Math.ceil((i + 1) / 4) * 10}"
@@ -77,7 +99,23 @@ export function createSvg({ colors }: Theme) {
       fill="${color}"
     />
   `
+}
 
+export function createSvg({ colors }: Theme) {
+  const filteredColors = Object.entries(colors).reduce(
+    (acc: string[], [key, color]) => {
+      const isPreviewColor = ['black', 'transparent', 'terminal'].every(
+        (keyTerm) => !key.includes(keyTerm)
+      )
+
+      if (isPreviewColor) {
+        acc.push(color)
+      }
+
+      return acc
+    },
+    []
+  )
   return `
     <svg
       width="200"
@@ -85,7 +123,7 @@ export function createSvg({ colors }: Theme) {
       viewBox="0 0 50 ${Math.ceil(Object.keys(colors).length / 4) * 12}"
       xmlns="http://www.w3.org/2000/svg"
     >
-      ${[...new Set(Object.values(colors))].map(circle).join('')}
+    ${[...new Set(filteredColors)].map(createCircle).join('')}
     </svg>
   `
 }
@@ -157,30 +195,30 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
       'terminal.foreground': colors.textExtraLight,
       'terminal.bright_foreground': colors.textExtraLight,
       'terminal.dim_foreground': colors.textMedium,
-      'terminal.ansi.black': colors.black,
-      'terminal.ansi.bright_black': colors.black,
-      'terminal.ansi.dim_black': colors.black,
-      'terminal.ansi.red': colors.red,
-      'terminal.ansi.bright_red': colors.red,
-      'terminal.ansi.dim_red': colors.red,
-      'terminal.ansi.green': colors.green,
-      'terminal.ansi.bright_green': colors.green,
-      'terminal.ansi.dim_green': colors.green,
-      'terminal.ansi.yellow': colors.yellow,
-      'terminal.ansi.bright_yellow': colors.yellow,
-      'terminal.ansi.dim_yellow': colors.yellow,
-      'terminal.ansi.blue': colors.blue,
-      'terminal.ansi.bright_blue': colors.blue,
-      'terminal.ansi.dim_blue': colors.blue,
-      'terminal.ansi.magenta': colors.magenta,
-      'terminal.ansi.bright_magenta': colors.magenta,
-      'terminal.ansi.dim_magenta': colors.magenta,
-      'terminal.ansi.cyan': colors.cyan,
-      'terminal.ansi.bright_cyan': colors.cyan,
-      'terminal.ansi.dim_cyan': colors.cyan,
+      'terminal.ansi.black': colors.terminalBlack,
+      'terminal.ansi.bright_black': colors.terminalBlackBright,
+      'terminal.ansi.dim_black': colors.terminalBlackDim,
+      'terminal.ansi.red': colors.terminalRed,
+      'terminal.ansi.bright_red': colors.terminalRedBright,
+      'terminal.ansi.dim_red': colors.terminalRedDim,
+      'terminal.ansi.green': colors.terminalGreen,
+      'terminal.ansi.bright_green': colors.terminalGreenBright,
+      'terminal.ansi.dim_green': colors.terminalGreenDim,
+      'terminal.ansi.yellow': colors.terminalYellow,
+      'terminal.ansi.bright_yellow': colors.terminalYellowBright,
+      'terminal.ansi.dim_yellow': colors.terminalYellowDim,
+      'terminal.ansi.blue': colors.terminalBlue,
+      'terminal.ansi.bright_blue': colors.terminalBlueBright,
+      'terminal.ansi.dim_blue': colors.terminalBlueDim,
+      'terminal.ansi.magenta': colors.terminalMagenta,
+      'terminal.ansi.bright_magenta': colors.terminalMagentaBright,
+      'terminal.ansi.dim_magenta': colors.terminalMagentaDim,
+      'terminal.ansi.cyan': colors.terminalCyan,
+      'terminal.ansi.bright_cyan': colors.terminalCyanBright,
+      'terminal.ansi.dim_cyan': colors.terminalCyanDim,
       'terminal.ansi.white': colors.white,
-      'terminal.ansi.bright_white': colors.white,
-      'terminal.ansi.dim_white': colors.white,
+      'terminal.ansi.bright_white': colors.terminalWhiteBright,
+      'terminal.ansi.dim_white': colors.terminalWhiteDim,
       'link_text.hover': colors.textExtraLight,
       conflict: colors.red,
       'conflict.background': colors.background,
@@ -224,7 +262,13 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
       warning: colors.yellow,
       'warning.background': colors.background,
       'warning.border': colors.yellow,
-      players: [],
+      players: [
+        {
+          cursor: colors.syntaxKeyword,
+          selection: colors.backgroundDraggingOver,
+          background: colors.backgroundActiveLine,
+        },
+      ],
       syntax: {
         attribute: {
           color: colors.syntaxAttribute,
@@ -448,6 +492,15 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
         },
       },
       'background.appearance': 'opaque',
+      'vim.mode.text': colors.background,
+      'vim.normal.background': colors.blue,
+      'vim.helix_normal.background': colors.blue,
+      'vim.visual.background': colors.syntaxBoolean,
+      'vim.helix_select.background': colors.syntaxBoolean,
+      'vim.insert.background': colors.green,
+      'vim.visual_line.background': colors.syntaxBoolean,
+      'vim.visual_block.background': colors.syntaxBoolean,
+      'vim.replace.background': colors.red,
     },
   }
 }
