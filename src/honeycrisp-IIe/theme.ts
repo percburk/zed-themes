@@ -107,7 +107,6 @@ export function createSvg({ colors }: Theme) {
       const isPreviewColor = ['black', 'transparent', 'terminal'].every(
         (keyTerm) => !key.includes(keyTerm)
       )
-
       if (isPreviewColor) {
         acc.push(color)
       }
@@ -116,14 +115,16 @@ export function createSvg({ colors }: Theme) {
     },
     []
   )
+  const uniqueColors = [...new Set(filteredColors)]
+
   return `
     <svg
       width="200"
       height="250"
-      viewBox="0 0 50 ${Math.ceil(Object.keys(colors).length / 4) * 12}"
+      viewBox="0 0 50 ${Math.ceil(Object.keys(uniqueColors).length / 4) * 12}"
       xmlns="http://www.w3.org/2000/svg"
     >
-    ${[...new Set(filteredColors)].map(createCircle).join('')}
+    ${uniqueColors.map(createCircle).join('')}
     </svg>
   `
 }
