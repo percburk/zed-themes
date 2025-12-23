@@ -138,7 +138,7 @@
         "warning.border": "#ffffff10",
         "players": [
           {
-            "cursor": "#5DE4c7",
+            "cursor": "#91B4D5",
             "selection": "#7390AA80",
             "background": "#282b3a"
           }
@@ -367,8 +367,8 @@
         },
         "background.appearance": "opaque",
         "vim.mode.text": "#1b1e28",
-        "vim.normal.background": "#ADD7FF",
-        "vim.helix_normal.background": "#ADD7FF",
+        "vim.normal.background": "#91B4D5",
+        "vim.helix_normal.background": "#91B4D5",
         "vim.visual.background": "#f087bd",
         "vim.helix_select.background": "#f087bd",
         "vim.insert.background": "#5DE4c7",
@@ -512,7 +512,7 @@
         "warning.border": "#ffffff10",
         "players": [
           {
-            "cursor": "#5DE4c7",
+            "cursor": "#91B4D5",
             "selection": "#7390AA80",
             "background": "#282b3a"
           }
@@ -741,8 +741,8 @@
         },
         "background.appearance": "opaque",
         "vim.mode.text": "#252b37",
-        "vim.normal.background": "#ADD7FF",
-        "vim.helix_normal.background": "#ADD7FF",
+        "vim.normal.background": "#91B4D5",
+        "vim.helix_normal.background": "#91B4D5",
         "vim.visual.background": "#f087bd",
         "vim.helix_select.background": "#f087bd",
         "vim.insert.background": "#5DE4c7",
@@ -886,7 +886,7 @@
         "warning.border": "#ffffff10",
         "players": [
           {
-            "cursor": "#5DE4c7",
+            "cursor": "#91B4D5",
             "selection": "#7390AA80",
             "background": "#282b3a"
           }
@@ -1115,8 +1115,8 @@
         },
         "background.appearance": "opaque",
         "vim.mode.text": "#1b1e28",
-        "vim.normal.background": "#ADD7FF",
-        "vim.helix_normal.background": "#ADD7FF",
+        "vim.normal.background": "#91B4D5",
+        "vim.helix_normal.background": "#91B4D5",
         "vim.visual.background": "#f087bd",
         "vim.helix_select.background": "#f087bd",
         "vim.insert.background": "#5DE4c7",
@@ -1260,7 +1260,7 @@
         "warning.border": "#ffffff10",
         "players": [
           {
-            "cursor": "#5DE4c7",
+            "cursor": "#91B4D5",
             "selection": "#7390AA80",
             "background": "#282b3a"
           }
@@ -1489,8 +1489,8 @@
         },
         "background.appearance": "opaque",
         "vim.mode.text": "#252b37",
-        "vim.normal.background": "#ADD7FF",
-        "vim.helix_normal.background": "#ADD7FF",
+        "vim.normal.background": "#91B4D5",
+        "vim.helix_normal.background": "#91B4D5",
         "vim.visual.background": "#f087bd",
         "vim.helix_select.background": "#f087bd",
         "vim.insert.background": "#5DE4c7",
