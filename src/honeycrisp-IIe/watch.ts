@@ -46,8 +46,6 @@ async function generateTheme() {
     fs.writeFileSync(`${ZED_THEMES_DIR}/honeycrisp-IIe.json`, json)
   }
 
-  delete base.colors.black
-  delete base.colors.transparent
   sharp(Buffer.from(createSvg(base).trim()), { density: 400 })
     .png()
     .toFile('assets/honeycrisp-IIe-dots.png')
