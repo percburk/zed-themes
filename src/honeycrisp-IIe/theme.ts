@@ -183,7 +183,7 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
       'editor.background': colors.background,
       'editor.gutter.background': colors.background,
       'editor.subheader.background': colors.background,
-      'editor..background': colors.backgroundActiveLine,
+      'editor.active_line.background': colors.backgroundActiveLine,
       'editor.highlighted_line.background': colors.backgroundActiveLine,
       'editor.line_number': colors.textMedium,
       'editor.active_line_number': colors.textExtraLight,
