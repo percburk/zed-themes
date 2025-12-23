@@ -214,7 +214,7 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
       'warning.border': `${colors.white}10`,
       players: [
         {
-          cursor: colors.brightMint,
+          cursor: colors.desaturatedBlue,
           selection: `${colors.bluishGrayBrighter}80`,
           background: '#282b3a',
         },
