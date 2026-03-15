@@ -366,15 +366,22 @@
           }
         },
         "background.appearance": "opaque",
-        "vim.mode.text": "#1b1e28",
         "vim.normal.background": "#91B4D5",
+        "vim.normal.foreground": "#1b1e28",
         "vim.helix_normal.background": "#91B4D5",
+        "vim.helix_normal.foreground": "#1b1e28",
         "vim.visual.background": "#f087bd",
+        "vim.visual.foreground": "#1b1e28",
         "vim.helix_select.background": "#f087bd",
+        "vim.helix_select.foreground": "#1b1e28",
         "vim.insert.background": "#5DE4c7",
+        "vim.insert.foreground": "#1b1e28",
         "vim.visual_line.background": "#f087bd",
+        "vim.visual_line.foreground": "#1b1e28",
         "vim.visual_block.background": "#f087bd",
-        "vim.replace.background": "#d0679d"
+        "vim.visual_block.foreground": "#1b1e28",
+        "vim.replace.background": "#d0679d",
+        "vim.replace.foreground": "#1b1e28"
       }
     },
     {
@@ -740,15 +747,22 @@
           }
         },
         "background.appearance": "opaque",
-        "vim.mode.text": "#252b37",
         "vim.normal.background": "#91B4D5",
+        "vim.normal.foreground": "#252b37",
         "vim.helix_normal.background": "#91B4D5",
+        "vim.helix_normal.foreground": "#252b37",
         "vim.visual.background": "#f087bd",
+        "vim.visual.foreground": "#252b37",
         "vim.helix_select.background": "#f087bd",
+        "vim.helix_select.foreground": "#252b37",
         "vim.insert.background": "#5DE4c7",
+        "vim.insert.foreground": "#252b37",
         "vim.visual_line.background": "#f087bd",
+        "vim.visual_line.foreground": "#252b37",
         "vim.visual_block.background": "#f087bd",
-        "vim.replace.background": "#d0679d"
+        "vim.visual_block.foreground": "#252b37",
+        "vim.replace.background": "#d0679d",
+        "vim.replace.foreground": "#252b37"
       }
     },
     {
@@ -1114,15 +1128,22 @@
           }
         },
         "background.appearance": "opaque",
-        "vim.mode.text": "#1b1e28",
         "vim.normal.background": "#91B4D5",
+        "vim.normal.foreground": "#1b1e28",
         "vim.helix_normal.background": "#91B4D5",
+        "vim.helix_normal.foreground": "#1b1e28",
         "vim.visual.background": "#f087bd",
+        "vim.visual.foreground": "#1b1e28",
         "vim.helix_select.background": "#f087bd",
+        "vim.helix_select.foreground": "#1b1e28",
         "vim.insert.background": "#5DE4c7",
+        "vim.insert.foreground": "#1b1e28",
         "vim.visual_line.background": "#f087bd",
+        "vim.visual_line.foreground": "#1b1e28",
         "vim.visual_block.background": "#f087bd",
-        "vim.replace.background": "#d0679d"
+        "vim.visual_block.foreground": "#1b1e28",
+        "vim.replace.background": "#d0679d",
+        "vim.replace.foreground": "#1b1e28"
       }
     },
     {
@@ -1488,15 +1509,22 @@
           }
         },
         "background.appearance": "opaque",
-        "vim.mode.text": "#252b37",
         "vim.normal.background": "#91B4D5",
+        "vim.normal.foreground": "#252b37",
         "vim.helix_normal.background": "#91B4D5",
+        "vim.helix_normal.foreground": "#252b37",
         "vim.visual.background": "#f087bd",
+        "vim.visual.foreground": "#252b37",
         "vim.helix_select.background": "#f087bd",
+        "vim.helix_select.foreground": "#252b37",
         "vim.insert.background": "#5DE4c7",
+        "vim.insert.foreground": "#252b37",
         "vim.visual_line.background": "#f087bd",
+        "vim.visual_line.foreground": "#252b37",
         "vim.visual_block.background": "#f087bd",
-        "vim.replace.background": "#d0679d"
+        "vim.visual_block.foreground": "#252b37",
+        "vim.replace.background": "#d0679d",
+        "vim.replace.foreground": "#252b37"
       }
     }
   ]
