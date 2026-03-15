@@ -107,7 +107,7 @@ export function createSvg({ colors }: Theme) {
       const isPreviewColor = ['black', 'transparent', 'terminal'].every(
         (keyTerm) => !key.includes(keyTerm)
       )
-      if (isPreviewColor) {
+      if (isPreviewColor && !acc.includes(color)) {
         acc.push(color)
       }
 
@@ -115,16 +115,15 @@ export function createSvg({ colors }: Theme) {
     },
     []
   )
-  const uniqueColors = [...new Set(filteredColors)]
 
   return `
     <svg
       width="200"
       height="250"
-      viewBox="0 0 50 ${Math.ceil(Object.keys(uniqueColors).length / 4) * 12}"
+      viewBox="0 0 50 ${Math.ceil(Object.keys(filteredColors).length / 4) * 12}"
       xmlns="http://www.w3.org/2000/svg"
     >
-    ${uniqueColors.map(createCircle).join('')}
+    ${filteredColors.map(createCircle).join('')}
     </svg>
   `
 }
@@ -493,15 +492,22 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
         },
       },
       'background.appearance': 'opaque',
-      'vim.mode.text': colors.background,
       'vim.normal.background': colors.blue,
+      'vim.normal.foreground': colors.background,
       'vim.helix_normal.background': colors.blue,
+      'vim.helix_normal.foreground': colors.background,
       'vim.visual.background': colors.syntaxBoolean,
+      'vim.visual.foreground': colors.background,
       'vim.helix_select.background': colors.syntaxBoolean,
+      'vim.helix_select.foreground': colors.background,
       'vim.insert.background': colors.green,
+      'vim.insert.foreground': colors.background,
       'vim.visual_line.background': colors.syntaxBoolean,
+      'vim.visual_line.foreground': colors.background,
       'vim.visual_block.background': colors.syntaxBoolean,
+      'vim.visual_block.foreground': colors.background,
       'vim.replace.background': colors.red,
+      'vim.replace.foreground': colors.background,
     },
   }
 }
